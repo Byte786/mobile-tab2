@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@300;700&display=swap");
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body  {
+        background-image: url("https://images.unsplash.com/photo-1554110397-9bac083977c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"), 
+        url("https://images.unsplash.com/photo-1533294455009-a77b7557d2d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+background-repeat: no-repeat, repeat;
+background-position: center;
+background-color: #cccccc;
+}
+    .nav-bar{
+        display: flex;
+        align-items: center;
+        background-color: rgb(157, 176, 240);
+        height: 50px;
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+    }
+    .menu a{
+        text-decoration: none;
+        color: white;
+        margin: 0 15px;
+        font-size: 18px;
+    }
+    .menu a:hover{
+        color: rgb(111, 103, 103);
+    }
+
+    .body{
+        background-color: rgb(114, 172, 230);
+        height: calc(100vh - 50px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+    }
+    .mob-tab{
+        display: none;
+    }
+
+    /* Lets make mobile tabs to show only for mobiles. so wrap it in media query */
+
+    @media screen and (max-width:600px) {
+        .nav-bar{
+            display: none;
+        }
+        .body{
+            height: calc(100vh - 60px);
+            
+        }
+        .mob-tab{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        background-color: rgb(199, 172, 248);
+        display: flex;
+        align-items: center;
+    }
+    .tabs{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        list-style-type: none;
+    }
+    .tabs a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: rgb(70, 66, 66);
+        font-weight: 600;
+    }
+    .tabs a:hover{
+        color: rgb(241, 19, 211);
+    }
+    .tabs a i {
+        font-size: 20px;
+        margin: 5px;
+    }
+    }
